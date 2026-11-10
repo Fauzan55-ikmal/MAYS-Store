@@ -48,3 +48,86 @@ h3 {
   display: table;
   clear: both;
 }
+
+/* 02. HEADER DAN NAVIGASI */
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid #dedbd2;
+  background-color: rgba(244, 241, 233, 0.95); /* Sedikit transparan */
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* CSS3 Box Shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header__inner {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 0;
+}
+.brand {
+  float: left;
+  display: inline-block;
+  color: #191a17;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+}
+.brand__accent {
+  color: #7d9637;
+}
+.brand__dot {
+  color: #f36b45;
+}
+
+.site-nav {
+  float: left;
+  margin-top: 4px;
+  margin-left: 60px;
+}
+.site-nav__link {
+  display: inline-block;
+  margin-right: 25px;
+  padding: 5px 0;
+  color: #77786f;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-transition: color 0.3s ease; /* CSS3 Transition */
+  transition: color 0.3s ease;
+}
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: #191a17;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.site-nav__link--active {
+  color: #191a17;
+}
+
+.header-bag {
+  float: right;
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #191a17;
+  border-radius: 20px; /* CSS3 Rounded Corner */
+  color: #191a17;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease; /* CSS3 Transition */
+  transition: all 0.3s ease;
+}
+.header-bag:hover,
+.header-bag:focus {
+  background-color: #191a17;
+  color: #ffffff;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* CSS3 Box Shadow Hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.header-bag__icon {
+  margin-left: 8px;
+  font-size: 13px;
+}
