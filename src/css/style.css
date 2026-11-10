@@ -138,3 +138,163 @@ h3 {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* 04. HERO / BANNER UTAMA */
+#hero {
+  margin-top: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #dedbd2;
+}
+.hero__copy {
+  float: left;
+  width: 48%;
+  padding-top: 34px;
+  padding-right: 36px;
+  -webkit-animation: slideUpFade 1s cubic-bezier(0.2, 0.8, 0.2, 1); /* CSS3 Animation */
+  animation: slideUpFade 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.eyebrow {
+  margin-bottom: 30px;
+  color: #718637;
+  font-size: 10px;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.eyebrow__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #f36b45;
+}
+.hero__title {
+  margin-bottom: 22px;
+  color: #191a17;
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -3.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* CSS3 Text Shadow */
+}
+.hero__title-accent {
+  color: #f36b45;
+}
+.hero__title-outline {
+  color: #191a17;
+  text-decoration: underline;
+  text-decoration-color: #c9f36a;
+}
+.hero__description {
+  max-width: 440px;
+  margin-bottom: 24px;
+  color: #686960;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: justify;
+}
+.hero__actions {
+  margin-bottom: 38px;
+}
+
+/* Tombol dengan CSS3 */
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 25px; /* CSS3 Rounded Corner */
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  -webkit-transition: all 0.3s ease; /* CSS3 Transition */
+  transition: all 0.3s ease;
+}
+.button span {
+  margin-left: 12px;
+  font-size: 14px;
+}
+.button--dark {
+  border: 1px solid #191a17;
+  color: #ffffff;
+  /* CSS3 Gradient */
+  background: -webkit-linear-gradient(left, #191a17, #3d3e38);
+  background: linear-gradient(to right, #191a17, #3d3e38);
+}
+.button--dark:hover,
+.button--dark:focus {
+  border-color: #718637;
+  /* CSS3 Gradient Hover */
+  background: -webkit-linear-gradient(left, #718637, #8ba840);
+  background: linear-gradient(to right, #718637, #8ba840);
+  -webkit-transform: translateY(-3px); /* CSS3 2D Transform */
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 5px 15px rgba(113, 134, 55, 0.4); /* CSS3 Box Shadow */
+  box-shadow: 0 5px 15px rgba(113, 134, 55, 0.4);
+}
+.text-link {
+  display: inline-block;
+  margin-left: 16px;
+  padding: 4px 0;
+  color: #292a25;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: underline;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.text-link:hover,
+.text-link:focus {
+  color: #718637;
+}
+
+.hero__footnote {
+  padding-top: 14px;
+  border-top: 1px solid #dedbd2;
+}
+.hero__footnote-number {
+  margin-right: 10px;
+  color: #f36b45;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.hero__footnote-text {
+  color: #85867c;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.hero__visual {
+  float: right;
+  width: 52%;
+  padding: 10px 0 20px 20px;
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* CSS3 Rounded Corner */
+  background-color: #dedbd2;
+  -webkit-box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15); /* CSS3 Box Shadow */
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.5s ease; /* CSS3 Transition */
+  transition: all 0.5s ease;
+}
+.hero__image:hover {
+  -webkit-transform: scale(1.02) rotate(1deg); /* CSS3 2D Transform */
+  transform: scale(1.02) rotate(1deg);
+}
+.hero__image-caption {
+  float: right;
+  margin: 20px 0 0;
+  color: #898a80;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: right;
+}
+.hero__image-caption span {
+  margin: 0 5px;
+  color: #f36b45;
+}
