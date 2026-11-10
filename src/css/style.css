@@ -563,3 +563,29 @@ h3 {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.catalog-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Jarak antara teks dan tombol */
+  margin-top: 1.8rem;
+  padding: 1.7rem 0;
+  border-top: 1px solid #dedbd2;
+}
+.catalog-bottom p {
+  margin: 0;
+  color: #77786f;
+  font-size: 13px;
+}
+/* Modifikasi text-link khusus di bagian bawah katalog (menghilangkan garis bawah bawaan text-link) */
+.catalog-bottom .text-link {
+  text-decoration: none;
+  font-size: 12px;
+  color: #191a17;
+}
+.catalog-bottom .text-link:hover,
+.catalog-bottom .text-link:focus {
+  color: #718637; /* Berubah hijau olive waktu di-hover */
+  text-decoration: underline; /* Muncul garis bawah waktu di-hover */
+}
