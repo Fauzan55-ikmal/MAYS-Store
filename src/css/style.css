@@ -589,3 +589,66 @@ h3 {
   color: #718637; /* Berubah hijau olive waktu di-hover */
   text-decoration: underline; /* Muncul garis bawah waktu di-hover */
 }
+
+/* 07. TENTANG KAMI */
+.story-section {
+  margin-top: 180px;
+  padding: 0 0 75px;
+  border-bottom: 1px solid #dedbd2;
+}
+.story-section__visual {
+  float: left;
+  width: 46%;
+}
+.story-section__visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* CSS3 Rounded Corner */
+  /* CSS3 Solid Drop Shadow sbg elemen desain dekoratif */
+  -webkit-box-shadow: -15px 15px 0px #c9f36a;
+  box-shadow: -15px 15px 0px #c9f36a;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.story-section__visual img:hover {
+  -webkit-transform: translate(5px, -5px); /* CSS3 Translate */
+  transform: translate(5px, -5px);
+  -webkit-box-shadow: -20px 20px 0px #f36b45;
+  box-shadow: -20px 20px 0px #f36b45;
+}
+
+.story-section__copy {
+  float: right;
+  width: 47%;
+  padding-top: 20px;
+}
+.story-section__title {
+  margin-bottom: 30px;
+  color: #191a17;
+  font-size: 37px;
+  font-weight: 900;
+  line-height: 1.13;
+  letter-spacing: -1.6px;
+}
+.story-section__title span {
+  color: #718637;
+  font-style: italic;
+  font-weight: normal;
+}
+.story-section__paragraph {
+  margin-bottom: 30px;
+  color: #6f7067;
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+  text-indent: 4em;
+}
+.story-section__quote {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 3px solid #f36b45;
+  color: #282923;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+}
