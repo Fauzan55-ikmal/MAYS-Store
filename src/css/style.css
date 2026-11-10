@@ -131,3 +131,10 @@ h3 {
   margin-left: 8px;
   font-size: 13px;
 }
+
+/* 03. LEBAR KONTEN UTAMA */
+.page-shell {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
