@@ -298,3 +298,49 @@ h3 {
   margin: 0 5px;
   color: #f36b45;
 }
+
+/* 05. HEADING BAGIAN */
+.product-section {
+  padding-top: 72px;
+}
+.section-heading {
+  margin-bottom: 25px;
+}
+.section-heading__copy {
+  float: left;
+  max-width: 70%;
+}
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+.section-title {
+  margin: 0;
+  color: #191a17;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1.7px;
+}
+.section-title span {
+  color: #718637;
+  font-style: italic;
+  font-weight: normal;
+}
+.section-description {
+  margin: 9px 0 0;
+  color: #7b7c72;
+  font-size: 12px;
+}
+.product-filter-note {
+  float: right;
+  margin-top: 26px;
+  color: #77786f;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-align: right;
+}
+.product-filter-note span {
+  margin: 0 5px;
+  color: #f36b45;
+}
