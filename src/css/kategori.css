@@ -109,7 +109,6 @@
 }
 
 /* 03. CATALOG HERO (SINKRON PRESISI V1) */
-
 .catalog-hero {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -118,15 +117,12 @@
   padding: 20px 0 40px;
   border-bottom: 1px solid #d5d8cc;
 }
-
 .catalog-hero__copy {
   min-width: 0;
 }
-
 .catalog-hero__copy .eyebrow {
   margin-bottom: 24px;
 }
-
 /* Tipografi Judul Lebih Besar & Dominan */
 .catalog-hero__title {
   margin: 0 0 24px;
@@ -137,7 +133,6 @@
   letter-spacing: -0.07em;
   line-height: 0.9;
 }
-
 .catalog-hero__title span {
   color: #718637;
   font-family: Georgia, "Times New Roman", serif;
@@ -145,7 +140,6 @@
   font-weight: 400;
   letter-spacing: -0.04em;
 }
-
 .catalog-hero__description {
   max-width: 420px;
   margin: 0 0 28px;
@@ -153,7 +147,6 @@
   font-size: 14px;
   line-height: 1.7;
 }
-
 .catalog-hero__meta {
   margin: 36px 0 0;
   padding-top: 16px;
@@ -163,7 +156,6 @@
   font-weight: 900;
   letter-spacing: 0.15em;
 }
-
 /* Container Gambar & Frame */
 .catalog-hero__visual {
   position: relative;
@@ -171,7 +163,6 @@
   margin: 0;
   padding: 0 0 32px 0;
 }
-
 /* Background Frame Gambar dengan Animasi Shift */
 .catalog-hero__visual::before {
   position: absolute;
@@ -187,7 +178,6 @@
   -webkit-animation: frame-shift 6s ease-in-out infinite alternate;
   animation: frame-shift 6s ease-in-out infinite alternate;
 }
-
 /* Gambar default + transition */
 .catalog-hero__visual img {
   width: 100%;
@@ -204,14 +194,12 @@
     transform 0.4s ease,
     box-shadow 0.4s ease;
 }
-
 /* Efek pas hover pada area gambar */
 .catalog-hero__visual:hover img {
   box-shadow: 0 28px 50px rgba(25, 26, 23, 0.22);
   -webkit-transform: scale(1.02) rotate(-1deg);
   transform: scale(1.02) rotate(-1deg);
 }
-
 .catalog-hero__caption {
   display: flex;
   justify-content: space-between;
@@ -222,7 +210,6 @@
   font-weight: 800;
   letter-spacing: 0.12em;
 }
-
 /* Badge Sticker Bulat (Animasi Aktif) */
 .catalog-hero__sticker {
   position: absolute;
@@ -245,11 +232,9 @@
   -webkit-animation: sticker-drift 4.5s ease-in-out infinite;
   animation: sticker-drift 4.5s ease-in-out infinite;
 }
-
 .catalog-hero__sticker span {
   color: #f36b45;
 }
-
 /* Keyframes Animasi Pergeseran Efek Background Frame */
 @-webkit-keyframes frame-shift {
   0% {
@@ -271,7 +256,6 @@
     transform: rotate(-1deg) scale(0.99);
   }
 }
-
 @keyframes frame-shift {
   0% {
     background: linear-gradient(135deg, #c9f36a, #718637);
@@ -285,4 +269,74 @@
     background: linear-gradient(135deg, #f36b45, #718637);
     transform: rotate(-1deg) scale(0.99);
   }
+}
+
+/* 04. CATALOG INTRO AND CATEGORY ANCHORS */
+.catalog-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 60px;
+}
+.catalog-intro__heading .eyebrow {
+  margin-bottom: 9px;
+}
+.catalog-intro__description {
+  max-width: 400px;
+  margin: 0 0 6px;
+  color: #77786f;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.category-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 45px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d5d8cc;
+}
+.category-jump__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid #d5d8cc;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.38);
+  color: #77786f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  -webkit-transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.category-jump__link:hover,
+.category-jump__link:focus-visible {
+  border-color: #191a17;
+  background-color: #191a17;
+  box-shadow: 0 7px 16px rgba(25, 26, 23, 0.12);
+  color: #ffffff;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+.category-jump__link--active {
+  border-color: #718637;
+  background-color: #718637;
+  box-shadow: 0 7px 16px rgba(113, 134, 55, 0.25);
+  color: #ffffff;
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
