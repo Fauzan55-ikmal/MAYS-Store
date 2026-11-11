@@ -45,6 +45,44 @@
   padding-bottom: 20px;
 }
 
+/* =====================================================================
+   HEADER CART BUTTON (CATALOG SPECIFIC)
+   ===================================================================== */
+.header-cart {
+  float: right; /* Menarik tombol mentok ke samping kanan header */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  /* border: 1px solid #191a17; */
+  border-radius: 50px;
+  background-color: transparent;
+  color: #191a17;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header-cart:hover {
+  background-color: #718637;
+  color: #ffffff;
+}
+
+.header-cart__icon {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.header-cart__count {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 /* 02. BREADCRUMB */
 .breadcrumb {
   display: flex;
