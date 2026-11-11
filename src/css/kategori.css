@@ -108,38 +108,34 @@
   font-weight: 800;
 }
 
-/* =====================================================================
-   03. CATALOG HERO
-   ===================================================================== */
+/* 03. CATALOG HERO (SINKRON PRESISI V1) */
 
 .catalog-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  grid-template-columns: 1fr 1.15fr;
   align-items: center;
-  gap: 40px;
-  padding: 40px 0 50px;
+  gap: 48px;
+  padding: 20px 0 40px;
   border-bottom: 1px solid #d5d8cc;
 }
 
 .catalog-hero__copy {
   min-width: 0;
-  padding: 16px 0;
 }
 
 .catalog-hero__copy .eyebrow {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
+/* Tipografi Judul Lebih Besar & Dominan */
 .catalog-hero__title {
-  max-width: 10ch;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   color: #191a17;
   font-family: inherit;
-  font-size: 64px;
+  font-size: 84px; /* Naik dari 76px biar lebih besar dan mantap */
   font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-  text-shadow: 0 3px 0 rgba(25, 26, 23, 0.035);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
 }
 
 .catalog-hero__title span {
@@ -148,19 +144,18 @@
   font-style: italic;
   font-weight: 400;
   letter-spacing: -0.04em;
-  text-shadow: 2px 3px 0 rgba(113, 134, 55, 0.12);
 }
 
 .catalog-hero__description {
-  max-width: 460px;
-  margin: 0 0 26px;
+  max-width: 420px;
+  margin: 0 0 28px;
   color: #77786f;
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .catalog-hero__meta {
-  margin: 32px 0 0;
+  margin: 36px 0 0;
   padding-top: 16px;
   border-top: 1px solid #d5d8cc;
   color: #85867c;
@@ -169,42 +164,39 @@
   letter-spacing: 0.15em;
 }
 
+/* Container Gambar & Frame */
 .catalog-hero__visual {
   position: relative;
   min-width: 0;
   margin: 0;
-  padding: 10px 10px 36px 0;
-  -webkit-perspective: 1100px;
-  perspective: 1100px;
+  padding: 0 0 32px 0;
 }
 
+/* Background Frame Gambar dengan Animasi Shift */
 .catalog-hero__visual::before {
   position: absolute;
   z-index: -1;
-  top: 24px;
-  right: 0;
+  top: 16px;
+  right: -12px;
   bottom: 12px;
-  left: 32px;
-  border-radius: 42% 12px 12px 12px;
-  background: -webkit-linear-gradient(315deg, #c9f36a, rgba(243, 107, 69, 0.72));
-  background: linear-gradient(135deg, #c9f36a, rgba(243, 107, 69, 0.72));
+  left: 24px;
+  border-radius: 28px;
+  background: -webkit-linear-gradient(135deg, #c9f36a, #f36b45);
+  background: linear-gradient(135deg, #c9f36a, #f36b45);
   content: "";
-  -webkit-transform: rotate(2deg) skewY(-1deg);
-  transform: rotate(2deg) skewY(-1deg);
+  -webkit-animation: frame-shift 6s ease-in-out infinite alternate;
+  animation: frame-shift 6s ease-in-out infinite alternate;
 }
 
+/* Gambar default + transition */
 .catalog-hero__visual img {
   width: 100%;
-  aspect-ratio: 5 / 5.6;
-  border: 5px solid #f5f2eb;
-  border-radius: 6px 32px 6px 32px;
-  background: -webkit-linear-gradient(305deg, #e9e4d9, #d8d1c5);
-  background: linear-gradient(145deg, #e9e4d9, #d8d1c5);
-  box-shadow: 0 16px 36px rgba(25, 26, 23, 0.1);
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(25, 26, 23, 0.12);
   object-fit: cover;
-  object-position: center 35%;
-  -webkit-transform: rotateY(-2deg);
-  transform: rotateY(-2deg);
+  object-position: center 20%;
+  display: block;
   -webkit-transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
@@ -213,42 +205,43 @@
     box-shadow 0.4s ease;
 }
 
+/* Efek pas hover pada area gambar */
 .catalog-hero__visual:hover img {
-  box-shadow: 0 28px 60px rgba(25, 26, 23, 0.17);
-  -webkit-transform: rotateY(0deg) rotateX(1deg) scale(1.01);
-  transform: rotateY(0deg) rotateX(1deg) scale(1.01);
+  box-shadow: 0 28px 50px rgba(25, 26, 23, 0.22);
+  -webkit-transform: scale(1.02) rotate(-1deg);
+  transform: scale(1.02) rotate(-1deg);
 }
 
 .catalog-hero__caption {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  margin-top: 14px;
+  margin-top: 12px;
   color: #85867c;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.12em;
 }
 
+/* Badge Sticker Bulat (Animasi Aktif) */
 .catalog-hero__sticker {
   position: absolute;
-  right: -2px;
-  bottom: 58px;
+  right: -10px;
+  bottom: 20px;
   display: grid;
-  width: 96px;
-  height: 96px;
+  width: 84px;
+  height: 84px;
   place-content: center;
-  border: 1px solid rgba(25, 26, 23, 0.12);
   border-radius: 50%;
   background-color: #c9f36a;
-  box-shadow: 0 12px 25px rgba(25, 26, 23, 0.16);
+  box-shadow: 0 10px 20px rgba(25, 26, 23, 0.15);
   color: #191a17;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   text-align: center;
-  -webkit-transform: rotate(9deg);
-  transform: rotate(9deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
   -webkit-animation: sticker-drift 4.5s ease-in-out infinite;
   animation: sticker-drift 4.5s ease-in-out infinite;
 }
@@ -257,25 +250,39 @@
   color: #f36b45;
 }
 
-/* Keyframes animasi sticker floating */
-@-webkit-keyframes sticker-drift {
-  0%,
-  100% {
-    -webkit-transform: rotate(9deg) translateY(0);
-    transform: rotate(9deg) translateY(0);
+/* Keyframes Animasi Pergeseran Efek Background Frame */
+@-webkit-keyframes frame-shift {
+  0% {
+    background: -webkit-linear-gradient(135deg, #c9f36a, #718637);
+    background: linear-gradient(135deg, #c9f36a, #718637);
+    -webkit-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
   }
   50% {
-    -webkit-transform: rotate(6deg) translateY(-6px);
-    transform: rotate(6deg) translateY(-6px);
+    background: -webkit-linear-gradient(135deg, #f36b45, #c9f36a);
+    background: linear-gradient(135deg, #f36b45, #c9f36a);
+    -webkit-transform: rotate(1.5deg) scale(1.01);
+    transform: rotate(1.5deg) scale(1.01);
+  }
+  100% {
+    background: -webkit-linear-gradient(135deg, #f36b45, #718637);
+    background: linear-gradient(135deg, #f36b45, #718637);
+    -webkit-transform: rotate(-1deg) scale(0.99);
+    transform: rotate(-1deg) scale(0.99);
   }
 }
 
-@keyframes sticker-drift {
-  0%,
-  100% {
-    transform: rotate(9deg) translateY(0);
+@keyframes frame-shift {
+  0% {
+    background: linear-gradient(135deg, #c9f36a, #718637);
+    transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(6deg) translateY(-6px);
+    background: linear-gradient(135deg, #f36b45, #c9f36a);
+    transform: rotate(1.5deg) scale(1.01);
+  }
+  100% {
+    background: linear-gradient(135deg, #f36b45, #718637);
+    transform: rotate(-1deg) scale(0.99);
   }
 }
