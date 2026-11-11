@@ -17,12 +17,13 @@
   top: 12px;
   left: 12px;
   padding: 12px 16px;
-  border-radius: 8px; /* CSS3 Rounded Corner */
-  background-color: #191a17; /* Warna gelap utama sesuai homepage */
+  border-radius: 8px;
+  background-color: #191a17;
   color: #ffffff;
-  -webkit-transform: translateY(-160%); /* CSS3 2D Transform Vendor Prefix */
-  transform: translateY(-160%);
-  -webkit-transition: transform 0.2s ease; /* CSS3 Transition Vendor Prefix */
+  overflow: hidden;
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-transition: transform 0.2s ease;
   transition: transform 0.2s ease;
 }
 
