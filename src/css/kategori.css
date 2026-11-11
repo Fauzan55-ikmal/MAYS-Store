@@ -44,3 +44,38 @@
 .catalog-main {
   padding-bottom: 20px;
 }
+
+/* 02. BREADCRUMB */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.breadcrumb a {
+  color: #77786f;
+  font-size: 11px;
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #718637;
+  text-decoration: underline;
+}
+
+.breadcrumb__divider {
+  margin: 0 8px;
+  color: #85867c;
+  font-size: 11px;
+}
+
+.breadcrumb__current {
+  color: #191a17;
+  font-size: 11px;
+  font-weight: 800;
+}
