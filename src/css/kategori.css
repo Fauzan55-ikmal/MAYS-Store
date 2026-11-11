@@ -1,0 +1,32 @@
+/* MAY'S — PRODUCT CATALOG
+   Page stylesheet: kategori.css
+
+   Shared styles are loaded from style.css.
+   This file contains only catalog-specific components and layout.
+
+   Design direction : editorial streetwear / independent fashion label
+   CSS topics       : gradients, rounded corners, borders, shadows,
+                      text effects, 2D/3D transforms, transitions,
+                      animations and responsive media queries. */
+
+/* 01. ACCESSIBILITY AND SHARED PAGE DETAILS */
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 12px 16px;
+  border-radius: 8px; /* CSS3 Rounded Corner */
+  background-color: #191a17; /* Warna gelap utama sesuai homepage */
+  color: #ffffff;
+  -webkit-transform: translateY(-160%); /* CSS3 2D Transform Vendor Prefix */
+  transform: translateY(-160%);
+  -webkit-transition: transform 0.2s ease; /* CSS3 Transition Vendor Prefix */
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
