@@ -684,3 +684,129 @@
 .catalog-product-card .product-card__price {
   font-size: 13px;
 }
+
+/* =====================================================================
+   08. RESPONSIVE MOBILE (IPHONE TARGET)
+   ===================================================================== */
+
+@media (max-width: 480px) {
+  .header-cart {
+    margin-top: -4px;
+    padding: 6px 12px;
+  }
+
+  /* Hero Katalog (Jika Masih Dipakai) */
+  .catalog-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 16px 0 32px;
+  }
+
+  .catalog-hero__title {
+    font-size: 48px;
+  }
+
+  .catalog-hero__description {
+    font-size: 13px;
+  }
+
+  .catalog-hero__visual {
+    padding-bottom: 24px;
+  }
+
+  .catalog-hero__sticker {
+    right: 0;
+    bottom: 12px;
+    width: 72px;
+    height: 72px;
+    font-size: 10px;
+  }
+
+  /* Intro & Navigasi Pill Kategori */
+  .catalog-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 36px;
+  }
+
+  .catalog-intro__description {
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  .category-jump {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px 0 32px;
+    padding-bottom: 14px;
+  }
+
+  .category-jump__link {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 8px 14px;
+  }
+
+  /* Layout Utama (Sidebar Turun ke Atas, Grid Produk di Bawah) */
+  .catalog-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .catalog-sidebar {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .catalog-sidebar__title {
+    font-size: 26px;
+  }
+
+  /* Toolbar & Heading Grup Produk */
+  .catalog-toolbar,
+  .product-group__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .catalog-toolbar__count {
+    text-align: left;
+  }
+
+  .product-group {
+    padding: 16px 0 28px;
+  }
+
+  .product-group__title {
+    font-size: 28px;
+  }
+
+  /* Grid Produk 2 Kolom Rapi di Layar iPhone */
+  .catalog-product-grid {
+    gap: 16px 10px;
+  }
+
+  .catalog-product-card .product-card__details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .catalog-product-card .product-card__price-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  .catalog-product-card .product-card__name {
+    font-size: 12px;
+  }
+
+  .catalog-product-card .product-card__price {
+    font-size: 11px;
+  }
+}
