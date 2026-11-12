@@ -16,6 +16,8 @@
 
     <!-- Shared stylesheet: konsistensi header, tombol, tipografi, dan footer. -->
     <link rel="stylesheet" href="src/css/style.css" />
+    <!-- Kategori stylesheet: aturan khusus halaman kategori. -->
+    <link rel="stylesheet" href="src/css/kategori.css" />
     <!-- Page stylesheet: hanya aturan khusus halaman cart/checkout. -->
     <link rel="stylesheet" href="src/css/cart.css" />
   </head>
@@ -27,6 +29,24 @@
     <aside class="announcement" id="announcement" aria-label="Pengumuman Promo">
       <p>DROP 01 IT'S COMMING <span class="announcement__divider">/</span> <mark>GRATIS ONGKIR</mark> MIN. BELANJA Rp500.000</p>
     </aside>
+
+    <!-- Global Header -->
+    <header class="site-header clearfix" id="top">
+      <div class="site-header__inner clearfix">
+        <a class="brand" href="index.html" aria-label="MAY'S, kembali ke beranda"> MAY<span class="brand__accent">'S</span><span class="brand__dot">.</span> </a>
+
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a class="site-nav__link" href="index.html">Home</a>
+          <a class="site-nav__link" href="kategori.html">Produk</a>
+          <a class="site-nav__link" href="index.html#tentang">Tentang Kami</a>
+        </nav>
+
+        <a class="header-cart site-nav__link--active" href="cart.html" aria-label="Keranjang Belanja" aria-current="page">
+          <span class="header-cart__icon" aria-hidden="true">🛒</span>
+          <span class="header-cart__count" id="cart-count">0</span>
+        </a>
+      </div>
+    </header>
 
     <!-- Konten Disini -->
 
