@@ -534,3 +534,153 @@
   font-style: italic;
   line-height: 1.6;
 }
+
+/* =====================================================================
+   07. CATALOG TOOLBAR AND PRODUCT GROUPS
+   ===================================================================== */
+
+.catalog-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d5d8cc;
+}
+
+.catalog-toolbar .eyebrow {
+  margin-bottom: 6px;
+}
+
+.catalog-toolbar__title {
+  margin: 0;
+  color: #191a17;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.catalog-toolbar__title span {
+  color: #f36b45;
+}
+
+.catalog-toolbar__count {
+  margin: 0 0 4px;
+  color: #77786f;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: right;
+}
+
+.catalog-toolbar__count strong {
+  margin-right: 4px;
+  color: #718637;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+/* Grup Kategori Produk */
+.product-group {
+  padding: 20px 0 36px;
+  scroll-margin-top: 24px;
+}
+
+.product-group + .product-group {
+  border-top: 1px solid #d5d8cc;
+}
+
+.product-group__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.product-group__index {
+  margin: 0 0 4px;
+  color: #85867c;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.product-group__title {
+  margin: 0;
+  color: #191a17;
+  font-family: inherit;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.product-group__title span {
+  color: #718637;
+}
+
+.product-group__count {
+  margin: 0 0 2px;
+  color: #85867c;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+
+/* Grid Produk 2 Kolom */
+.catalog-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.catalog-product-card {
+  min-width: 0;
+  -webkit-transition: transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+
+.catalog-product-card:hover {
+  -webkit-transform: translateY(-5px) rotateX(0.8deg);
+  transform: translateY(-5px) rotateX(0.8deg);
+}
+
+.catalog-product-card .product-card__image-wrap {
+  margin: 0;
+  border-radius: 5px 22px 5px 22px;
+  box-shadow: 0 10px 25px rgba(25, 26, 23, 0.05);
+}
+
+.catalog-product-card .product-card__image {
+  -webkit-transition-delay: 35ms;
+  transition-delay: 35ms;
+}
+
+.catalog-product-card .product-card__image-wrap:hover .product-card__image {
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms;
+}
+
+.catalog-product-card__category {
+  margin: 0 0 4px;
+  color: #85867c;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.catalog-product-card .product-card__name {
+  font-size: 14px;
+}
+
+.catalog-product-card .product-card__price {
+  font-size: 13px;
+}
