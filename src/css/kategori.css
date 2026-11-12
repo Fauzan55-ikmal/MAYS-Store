@@ -17,14 +17,14 @@
 
 .skip-link {
   position: absolute;
-  z-index: 100;
   top: 12px;
   left: 12px;
+  z-index: 100;
+  overflow: hidden;
   padding: 12px 16px;
   border-radius: 8px;
   background-color: #191a17;
   color: #ffffff;
-  overflow: hidden;
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
   -webkit-transition: transform 0.2s ease;
@@ -38,14 +38,14 @@
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   border: 0;
+  white-space: nowrap;
 }
 
 .catalog-main {
@@ -57,8 +57,8 @@
    ===================================================================== */
 
 .header-cart {
-  float: right;
   position: relative;
+  float: right;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -66,9 +66,9 @@
   border-radius: 50px;
   background-color: transparent;
   color: #191a17;
-  text-decoration: none;
   font-size: 14px;
   line-height: 1;
+  text-decoration: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -97,8 +97,8 @@
 .breadcrumb {
   display: flex;
   align-items: center;
-  padding-top: 20px;
   margin-bottom: 10px;
+  padding-top: 20px;
   font-size: 11px;
 }
 
@@ -196,16 +196,16 @@
 
 /* Frame Background Gambar (Animasi Pergeseran Color Shift) */
 .catalog-hero__visual::before {
+  content: "";
   position: absolute;
-  z-index: -1;
   top: 16px;
   right: -12px;
   bottom: 12px;
   left: 24px;
+  z-index: -1;
   border-radius: 28px;
   background: -webkit-linear-gradient(135deg, #c9f36a, #f36b45);
   background: linear-gradient(135deg, #c9f36a, #f36b45);
-  content: "";
   -webkit-animation: frame-shift 6s ease-in-out infinite alternate;
   animation: frame-shift 6s ease-in-out infinite alternate;
 }
@@ -216,9 +216,9 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(25, 26, 23, 0.12);
   object-fit: cover;
   object-position: center 20%;
+  box-shadow: 0 20px 40px rgba(25, 26, 23, 0.12);
   -webkit-transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
@@ -250,17 +250,17 @@
   right: -10px;
   bottom: 20px;
   display: grid;
+  place-content: center;
   width: 84px;
   height: 84px;
-  place-content: center;
   border-radius: 50%;
   background-color: #c9f36a;
-  box-shadow: 0 10px 20px rgba(25, 26, 23, 0.15);
   color: #191a17;
   font-size: 12px;
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(25, 26, 23, 0.15);
   -webkit-transform: rotate(8deg);
   transform: rotate(8deg);
   -webkit-animation: sticker-drift 4.5s ease-in-out infinite;
@@ -269,65 +269,6 @@
 
 .catalog-hero__sticker span {
   color: #f36b45;
-}
-
-/* Keyframe Animations */
-@-webkit-keyframes frame-shift {
-  0% {
-    background: -webkit-linear-gradient(135deg, #c9f36a, #718637);
-    background: linear-gradient(135deg, #c9f36a, #718637);
-    -webkit-transform: rotate(0deg) scale(1);
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    background: -webkit-linear-gradient(135deg, #f36b45, #c9f36a);
-    background: linear-gradient(135deg, #f36b45, #c9f36a);
-    -webkit-transform: rotate(1.5deg) scale(1.01);
-    transform: rotate(1.5deg) scale(1.01);
-  }
-  100% {
-    background: -webkit-linear-gradient(135deg, #f36b45, #718637);
-    background: linear-gradient(135deg, #f36b45, #718637);
-    -webkit-transform: rotate(-1deg) scale(0.99);
-    transform: rotate(-1deg) scale(0.99);
-  }
-}
-
-@keyframes frame-shift {
-  0% {
-    background: linear-gradient(135deg, #c9f36a, #718637);
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    background: linear-gradient(135deg, #f36b45, #c9f36a);
-    transform: rotate(1.5deg) scale(1.01);
-  }
-  100% {
-    background: linear-gradient(135deg, #f36b45, #718637);
-    transform: rotate(-1deg) scale(0.99);
-  }
-}
-
-@-webkit-keyframes sticker-drift {
-  0%,
-  100% {
-    -webkit-transform: rotate(9deg) translateY(0);
-    transform: rotate(9deg) translateY(0);
-  }
-  50% {
-    -webkit-transform: rotate(6deg) translateY(-6px);
-    transform: rotate(6deg) translateY(-6px);
-  }
-}
-
-@keyframes sticker-drift {
-  0%,
-  100% {
-    transform: rotate(9deg) translateY(0);
-  }
-  50% {
-    transform: rotate(6deg) translateY(-6px);
-  }
 }
 
 /* =====================================================================
@@ -395,8 +336,8 @@
 .category-jump__link:focus-visible {
   border-color: #191a17;
   background-color: #191a17;
-  box-shadow: 0 7px 16px rgba(25, 26, 23, 0.12);
   color: #ffffff;
+  box-shadow: 0 7px 16px rgba(25, 26, 23, 0.12);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
@@ -404,8 +345,8 @@
 .category-jump__link--active {
   border-color: #718637;
   background-color: #718637;
-  box-shadow: 0 7px 16px rgba(113, 134, 55, 0.25);
   color: #ffffff;
+  box-shadow: 0 7px 16px rgba(113, 134, 55, 0.25);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
@@ -686,7 +627,69 @@
 }
 
 /* =====================================================================
-   08. RESPONSIVE MOBILE (IPHONE TARGET)
+   08. KEYFRAME ANIMATIONS
+   ===================================================================== */
+
+@-webkit-keyframes frame-shift {
+  0% {
+    background: -webkit-linear-gradient(135deg, #c9f36a, #718637);
+    background: linear-gradient(135deg, #c9f36a, #718637);
+    -webkit-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    background: -webkit-linear-gradient(135deg, #f36b45, #c9f36a);
+    background: linear-gradient(135deg, #f36b45, #c9f36a);
+    -webkit-transform: rotate(1.5deg) scale(1.01);
+    transform: rotate(1.5deg) scale(1.01);
+  }
+  100% {
+    background: -webkit-linear-gradient(135deg, #f36b45, #718637);
+    background: linear-gradient(135deg, #f36b45, #718637);
+    -webkit-transform: rotate(-1deg) scale(0.99);
+    transform: rotate(-1deg) scale(0.99);
+  }
+}
+
+@keyframes frame-shift {
+  0% {
+    background: linear-gradient(135deg, #c9f36a, #718637);
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    background: linear-gradient(135deg, #f36b45, #c9f36a);
+    transform: rotate(1.5deg) scale(1.01);
+  }
+  100% {
+    background: linear-gradient(135deg, #f36b45, #718637);
+    transform: rotate(-1deg) scale(0.99);
+  }
+}
+
+@-webkit-keyframes sticker-drift {
+  0%,
+  100% {
+    -webkit-transform: rotate(9deg) translateY(0);
+    transform: rotate(9deg) translateY(0);
+  }
+  50% {
+    -webkit-transform: rotate(6deg) translateY(-6px);
+    transform: rotate(6deg) translateY(-6px);
+  }
+}
+
+@keyframes sticker-drift {
+  0%,
+  100% {
+    transform: rotate(9deg) translateY(0);
+  }
+  50% {
+    transform: rotate(6deg) translateY(-6px);
+  }
+}
+
+/* =====================================================================
+   09. RESPONSIVE MOBILE (IPHONE TARGET)
    ===================================================================== */
 
 @media (max-width: 480px) {
@@ -755,8 +758,8 @@
   }
 
   .catalog-sidebar {
-    padding: 18px;
     gap: 18px;
+    padding: 18px;
   }
 
   .catalog-sidebar__title {
