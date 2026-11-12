@@ -1,8 +1,8 @@
 # ==========================================
-# MAY'S STORE — Tugas 5 .gitignore
+# MAY'S STORE — Git Ignore Rules
 # ==========================================
 
-# System Files & OS Junk (Sampah bawaan OS Windows, Mac, & Linux)
+# System Files & OS Junk (Windows, macOS, & Linux)
 .DS_Store
 .DS_Store?
 ._*
@@ -12,8 +12,12 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# IDE & Editor Config (Biar folder settingan lokal editor gak ikut ke-upload)
+# IDE & Editor Config
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Logs & Temporary Files
+*.log
+tmp/
