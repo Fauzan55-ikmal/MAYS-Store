@@ -15,17 +15,20 @@
     <title>Your Cart — MAY'S Everyday Wear</title>
 
     <!-- Shared stylesheet: konsistensi header, tombol, tipografi, dan footer. -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <!-- Page stylesheet: hanya aturan khusus halaman cart/checkout. -->
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="src/css/cart.css" />
   </head>
 
   <body class="cart-page">
-    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+    <!-- Announcement Bar (HTML5 Semantic) -->
+    <aside class="announcement" id="announcement" aria-label="Pengumuman Promo">
+      <p>DROP 01 IT'S COMMING <span class="announcement__divider">/</span> <mark>GRATIS ONGKIR</mark> MIN. BELANJA Rp500.000</p>
+    </aside>
 
     <!-- Konten Disini -->
 
     <!-- javascript -->
-    <script src="cart.js" defer></script>
+    <script src="src/js/cart.js" defer></script>
   </body>
 </html>
