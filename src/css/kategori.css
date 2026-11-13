@@ -1,43 +1,4 @@
-/* 01. ACCESSIBILITY AND SHARED PAGE DETAILS */
-
-.skip-link {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 100;
-  overflow: hidden;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background-color: #191a17;
-  color: #ffffff;
-  -webkit-transform: translateY(-200%);
-  transform: translateY(-200%);
-  -webkit-transition: transform 0.2s ease;
-  transition: transform 0.2s ease;
-}
-
-.skip-link:focus {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-}
-
-.catalog-main {
-  padding-bottom: 20px;
-}
-
-/* 02. HEADER CART BUTTON (CATALOG SPECIFIC) */
+/* 01. HEADER CART BUTTON (CATALOG SPECIFIC) */
 
 .header-cart {
   position: relative;
@@ -207,30 +168,6 @@
   color: #85867c;
   font-size: 10px;
   font-weight: 800;
-}
-
-.catalog-sidebar__note {
-  padding: 16px;
-  border-radius: 12px;
-  background-color: #191a17;
-  color: #ffffff;
-}
-
-.catalog-sidebar__note-mark {
-  display: inline-block;
-  margin-bottom: 6px;
-  color: #c9f36a;
-  font-size: 18px;
-  -webkit-transform: rotateZ(-12deg);
-  transform: rotateZ(-12deg);
-}
-
-.catalog-sidebar__note p {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 1.6;
 }
 
 /* 05. CATALOG TOOLBAR AND PRODUCT GROUPS */
