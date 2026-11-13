@@ -26,12 +26,12 @@ Proyek e-commerce eceran _streetwear_ dan pakaian sehari-hari (_everyday wear_) 
 
 ### 2. Tugas 6 — Product Catalog (`kategori.html`)
 
-- **Editorial Catalog Layout**: Kombinasi CSS Grid untuk tata letak _sidebar_ navigasi cepat (_quick navigation_) dan grid produk 2 kolom.
-- **Category Jump Anchors**: Navigasi _pill_ interaktif dengan efek transisi elevasi (`translateY`) dan indikator status aktif.
+- **Editorial Catalog Layout**: Kombinasi CSS Grid untuk tata letak _sidebar_ navigasi cepat (_quick navigation_) dan grid produk 2 kolom yang langsung fokus pada daftar produk.
+- **Interactive Product Checkout Pills**: Tombol _pill_ interaktif di setiap kartu produk dengan efek transisi elevasi (`translateY`) dan animasi rotasi ikon panah (`-45deg` ke `0deg`) saat di-_hover_.
 - **2D/3D Transforms & Keyframe Animations**: Efek perspektif 3D ringan (`rotateX`) pada kartu produk, animasi _floating sticker badge_ (`sticker-drift`), serta pergeseran gradien latar belakang (`frame-shift`).
 - **Decorative Border Image**: Penerapan `border-image` bergradien pada komponen panduan ukuran (_Size Guide_).
 - **Pure CSS Accordion**: Komponen _Size Guide_ interaktif (buka/tutup) menggunakan teknik _checkbox hack_ tanpa JavaScript.
-- **Mobile-First iPhone Optimization**: Penyesuaian khusus _viewport_ seluler (`max-width: 480px`) dengan navigasi kategori yang dapat digeser secara horizontal (_horizontal scroll_).
+- **Mobile-First iPhone Optimization**: Penyesuaian tata letak _sidebar_ dan grid produk khusus untuk _viewport_ seluler (`max-width: 480px`).
 
 ---
 
