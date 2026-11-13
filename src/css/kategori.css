@@ -483,6 +483,67 @@
   font-size: 13px;
 }
 
+/* Tombol Pill Checkout di Bawah Kartu Produk */
+.product-card__checkout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 30%;
+  min-height: 40px;
+  margin-top: 14px;
+  padding: 9px 18px;
+  border: 1px solid #718637;
+  border-radius: 999px;
+  background-color: #718637;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 7px 16px rgba(113, 134, 55, 0.25);
+  -webkit-transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card__arrow {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  /* Awal: miring 45 derajat ke kanan atas */
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+
+.product-card__checkout:hover,
+.product-card__checkout:focus-visible {
+  border-color: #191a17;
+  background-color: #191a17;
+  color: #ffffff;
+  box-shadow: 0 7px 16px rgba(25, 26, 23, 0.12);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+/* Hover: panah berputar lurus ke kanan */
+.product-card__checkout:hover .product-card__arrow,
+.product-card__checkout:focus-visible .product-card__arrow {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 /* =====================================================================
    08. SIZE GUIDE
    Border image is used as a small decorative frame, not as a core layout.
