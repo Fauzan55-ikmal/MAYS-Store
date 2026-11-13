@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#191a17" />
+    <meta name="description" content="Selesaikan checkout MAY'S dengan nyaman. Isi informasi penerima, alamat pengiriman, dan metode pembayaran pilihanmu." />
+    <meta name="author" content="MAY'S" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MAY'S" />
+    <meta property="og:title" content="Your Cart — MAY'S" />
+    <meta property="og:description" content="Your pieces are waiting. Lengkapi detail pengiriman dan checkout MAY'S." />
+
+    <title>Your Cart — MAY'S Everyday Wear</title>
+
+    <!-- Shared stylesheet: konsistensi header, tombol, tipografi, dan footer. -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- Kategori stylesheet: aturan khusus halaman kategori. -->
+    <link rel="stylesheet" href="src/css/kategori.css" />
+    <!-- Page stylesheet: hanya aturan khusus halaman cart/checkout. -->
+    <link rel="stylesheet" href="src/css/cart.css" />
+  </head>
+
+  <body class="cart-page">
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+    <!-- Announcement Bar -->
+    <aside class="announcement" id="announcement" aria-label="Pengumuman Promo">
+      <p>DROP 01 IT'S COMMING <span class="announcement__divider">/</span> <mark>GRATIS ONGKIR</mark> MIN. BELANJA Rp500.000</p>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header clearfix" id="top">
+      <div class="site-header__inner clearfix">
+        <a class="brand" href="index.html" aria-label="MAY'S, kembali ke beranda"> MAY<span class="brand__accent">'S</span><span class="brand__dot">.</span> </a>
+
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a class="site-nav__link" href="index.html">Home</a>
+          <a class="site-nav__link" href="kategori.html">Produk</a>
+          <a class="site-nav__link" href="index.html#tentang">Tentang Kami</a>
+        </nav>
+
+        <a class="header-cart site-nav__link--active" href="cart.html" aria-label="Keranjang Belanja" aria-current="page">
+          <span class="header-cart__icon" aria-hidden="true">🛒</span>
+          <span class="header-cart__count" id="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Konten Disini -->
+
+    <!-- Global Footer -->
+    <div class="page-shell">
+      <footer class="site-footer clearfix" id="footer">
+        <div class="site-footer__brand-block">
+          <a class="brand brand--footer" href="#top"> MAY<span class="brand__accent">'S</span><span class="brand__dot">.</span> </a>
+          <p>Pakaian harian. Karakter personal.</p>
+        </div>
+
+        <div class="site-footer__student">
+          <p class="site-footer__heading">PROJECT INFO</p>
+          <p>Desain Web 1 - Tugas 7 (HTML5)</p>
+          <p>Fauzan Fauzia Fauzi · D112521003</p>
+          <p>IFK-25</p>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>© <time datetime="2026">2026</time> MAY'S. Konsep toko untuk project pembelajaran.</p>
+        </div>
+      </footer>
+    </div>
+    <!-- javascript -->
+    <script src="src/js/cart.js" defer></script>
+  </body>
+</html>

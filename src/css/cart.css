@@ -1,0 +1,53 @@
+/* =====================================================================
+   MAY'S — CART & CHECKOUT
+   Page stylesheet: cart.css
+
+   Shared styles are loaded from style.css.
+   This file contains only cart and checkout-specific components and layout.
+
+   Design direction : editorial streetwear / independent fashion label
+   HTML5 & CSS3     : video/audio media backgrounds, semantic layout,
+                      boxy industrial form controls, keyframe animations,
+                      transitions, and responsive media queries.
+   ===================================================================== */
+
+/* =====================================================================
+   01. ACCESSIBILITY AND SHARED PAGE DETAILS
+   ===================================================================== */
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  overflow: hidden;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #191a17;
+  color: #ffffff;
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+.cart-main {
+  padding-bottom: 40px;
+}
