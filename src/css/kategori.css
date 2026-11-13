@@ -1,4 +1,4 @@
-/* 03. BREADCRUMB */
+/* 01. BREADCRUMB */
 
 .breadcrumb {
   display: flex;
@@ -35,7 +35,7 @@
   font-weight: 800;
 }
 
-/* 04. CATALOG LAYOUT AND SIDEBAR */
+/* 02. CATALOG LAYOUT AND SIDEBAR */
 
 .catalog-layout {
   display: grid;
@@ -134,7 +134,7 @@
   font-weight: 800;
 }
 
-/* 05. CATALOG TOOLBAR AND PRODUCT GROUPS */
+/* 03. CATALOG TOOLBAR AND PRODUCT GROUPS */
 
 .catalog-toolbar {
   display: flex;
@@ -343,7 +343,7 @@
   transform: rotate(0deg);
 }
 
-/* 06. KEYFRAME ANIMATIONS */
+/* 04. KEYFRAME ANIMATIONS */
 
 @-webkit-keyframes frame-shift {
   0% {
