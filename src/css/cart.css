@@ -134,3 +134,217 @@
   color: var(--color-ink);
 }
 
+/* 03. CHECKOUT TWO-COLUMN LAYOUT */
+.checkout-workspace {
+  display: grid;
+  grid-template-columns: minmax(13.5rem, 0.72fr) minmax(0, 2.28fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.checkout-sidebar {
+  position: sticky;
+  top: 1.5rem;
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(251, 250, 246, 0.88);
+  box-shadow: var(--shadow-soft);
+}
+
+.checkout-sidebar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.checkout-sidebar__eyebrow {
+  margin: 0;
+  color: var(--color-muted-light);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.checkout-sidebar__step {
+  margin: 0;
+  color: var(--color-muted-light);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.checkout-sidebar__step span {
+  color: var(--color-orange);
+}
+
+.checkout-steps {
+  display: grid;
+  gap: 0.45rem;
+  margin-block: 1rem 1.3rem;
+}
+
+.checkout-steps__link {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease, transform var(--duration-fast) var(--ease-out), color var(--duration-fast) ease;
+}
+
+.checkout-steps__link:hover,
+.checkout-steps__link:focus-visible,
+.checkout-steps__link.is-active {
+  border-color: rgba(113, 134, 55, 0.18);
+  background: #f0f1e7;
+  color: var(--color-ink);
+}
+
+.checkout-steps__link:hover {
+  transform: translateX(3px);
+}
+
+.checkout-steps__number {
+  display: grid;
+  width: 1.9rem;
+  height: 1.9rem;
+  place-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-muted-light);
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+.checkout-steps__link.is-active .checkout-steps__number {
+  border-color: var(--color-olive);
+  background: var(--color-olive);
+  color: #fff;
+}
+
+.checkout-steps__copy {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.checkout-steps__copy strong {
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.checkout-steps__copy small {
+  color: var(--color-muted-light);
+  font-size: 0.59rem;
+}
+
+.checkout-steps__arrow {
+  color: var(--color-muted-light);
+  font-size: 0.8rem;
+}
+
+.checkout-sidebar__audio {
+  display: grid;
+  gap: 0.65rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.audio-toggle--sidebar {
+  width: 100%;
+  border-color: rgba(25, 26, 23, 0.12);
+  background: var(--color-ink);
+}
+
+.checkout-sidebar__audio-note {
+  margin: 0;
+  color: var(--color-muted-light);
+  font-size: 0.62rem;
+  line-height: 1.5;
+}
+
+/* Campaign video now lives in the left checkout sidebar, directly below music. */
+.checkout-sidebar__campaign {
+  margin: 1rem 0 0;
+}
+
+.checkout-sidebar__video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #24251f url("assets/1.png") center / cover no-repeat;
+  box-shadow: 0 0.75rem 1.8rem rgba(25, 26, 23, 0.10);
+}
+
+.checkout-sidebar__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.checkout-sidebar__video-mark {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-pill);
+  background: rgba(25, 26, 23, 0.62);
+  color: #fff;
+  font-size: 0.52rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.checkout-sidebar__campaign-caption {
+  margin-top: 0.55rem;
+  color: var(--color-muted-light);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.5;
+}
+
+.checkout-sidebar__campaign-caption span {
+  padding-inline: 0.15rem;
+  color: var(--color-orange);
+}
+
+.checkout-sidebar__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  background: #f5f0e4;
+}
+
+.checkout-sidebar__note > span {
+  color: var(--color-orange);
+  font-size: 1.05rem;
+}
+
+.checkout-sidebar__note p {
+  margin: 0;
+  color: var(--color-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
