@@ -848,3 +848,35 @@
   background: rgba(201, 243, 106, 0.15);
 }
 
+/* 09. KEYFRAME ANIMATIONS */
+@keyframes field-glow {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(113, 134, 55, 0.10); }
+  50% { box-shadow: 0 0 0 5px rgba(113, 134, 55, 0.045); }
+}
+
+@keyframes card-enter {
+  from { opacity: 0; transform: translateY(0.8rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 10. RESPONSIVE */
+@media (max-width: 960px) {
+  .checkout-workspace {
+    grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 2fr);
+    gap: 1.25rem;
+  }
+
+  .order-item {
+    grid-template-columns: 3.8rem minmax(0, 1fr) 3.7rem;
+  }
+
+  .order-item__image {
+    width: 3.8rem;
+    height: 4.8rem;
+  }
+
+  .order-item__line-total {
+    grid-column: 2 / -1;
+    justify-self: end;
+  }
+}
