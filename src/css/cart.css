@@ -541,3 +541,106 @@
   line-height: 1.5;
 }
 
+/* 07. DELIVERY AND PAYMENT CHOICES */
+.choice-list {
+  display: grid;
+  gap: 0.7rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: #fffefa;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) ease, background-color var(--duration-fast) ease, transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) ease;
+}
+
+.choice-card:hover {
+  border-color: rgba(113, 134, 55, 0.55);
+  transform: translateY(-2px);
+}
+
+.choice-card:has(input:checked) {
+  border-color: var(--color-olive);
+  background: #f4f6eb;
+  box-shadow: 0 0 0 2px rgba(113, 134, 55, 0.08);
+}
+
+.choice-card input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.choice-card input:focus-visible + .choice-card__indicator {
+  outline: 3px solid var(--color-olive);
+  outline-offset: 3px;
+}
+
+.choice-card__indicator {
+  position: relative;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid #b9b9ad;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.choice-card input:checked + .choice-card__indicator {
+  border: 5px solid var(--color-olive);
+}
+
+.choice-card__copy {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.choice-card__copy strong {
+  color: var(--color-ink);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.choice-card__copy small {
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.choice-card__price,
+.choice-card__mark {
+  color: var(--color-ink-soft);
+  font-size: 0.69rem;
+  font-weight: 900;
+  text-align: right;
+}
+
+.choice-card__mark {
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-xs);
+  background: #f0eee5;
+  color: var(--color-olive-dark);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+}
+
+.checkout-card__footnote {
+  margin: 0.85rem 0 0;
+  color: var(--color-muted-light);
+  font-size: 0.65rem;
+  line-height: 1.6;
+}
+
