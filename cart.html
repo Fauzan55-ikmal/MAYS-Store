@@ -160,6 +160,321 @@
           </div>
           <p class="checkout-heading__reference"><span>ORDER</span> MAY-<time datetime="2026-11">11.26</time></p>
         </header>
+
+        <form class="checkout-form" id="checkout-form" action="#" method="post">
+          <!-- CUSTOMER -->
+          <section class="checkout-card" id="customer-section" aria-labelledby="customer-title">
+            <div class="checkout-card__heading">
+              <div>
+                <p class="checkout-card__eyebrow">STEP 01 / PERSONAL</p>
+                <h3 class="checkout-card__title" id="customer-title">Informasi penerima</h3>
+              </div>
+              <span class="checkout-card__index" aria-hidden="true">01</span>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-field form-field--full">
+                <label for="customer-name">Nama lengkap <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-control"
+                  id="customer-name"
+                  name="customerName"
+                  type="text"
+                  placeholder="Nama sesuai penerima paket"
+                  autocomplete="name"
+                  minlength="3"
+                  maxlength="80"
+                  required
+                >
+                <small class="form-field__hint">Gunakan nama yang mudah dikenali kurir.</small>
+              </div>
+
+              <div class="form-field">
+                <label for="customer-email">Email <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-control"
+                  id="customer-email"
+                  name="email"
+                  type="email"
+                  placeholder="nama@email.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="customer-phone">Nomor WhatsApp <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-control"
+                  id="customer-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="08xxxxxxxxxx"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  minlength="9"
+                  maxlength="18"
+                  required
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- ADDRESS -->
+          <section class="checkout-card" id="address-section" aria-labelledby="address-title">
+            <div class="checkout-card__heading">
+              <div>
+                <p class="checkout-card__eyebrow">STEP 02 / DESTINATION</p>
+                <h3 class="checkout-card__title" id="address-title">Alamat pengiriman</h3>
+              </div>
+              <span class="checkout-card__index" aria-hidden="true">02</span>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-field form-field--full">
+                <label for="customer-address">Alamat lengkap <span aria-hidden="true">*</span></label>
+                <textarea
+                  class="form-control form-control--textarea"
+                  id="customer-address"
+                  name="address"
+                  rows="3"
+                  placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, dan patokan..."
+                  autocomplete="street-address"
+                  minlength="10"
+                  maxlength="300"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="customer-province">Provinsi <span aria-hidden="true">*</span></label>
+                <select class="form-control" id="customer-province" name="province" autocomplete="address-level1" required>
+                  <option value="" selected disabled>Pilih provinsi</option>
+                  <option value="Jawa Barat">Jawa Barat</option>
+                  <option value="DKI Jakarta">DKI Jakarta</option>
+                  <option value="Banten">Banten</option>
+                  <option value="Jawa Tengah">Jawa Tengah</option>
+                  <option value="DI Yogyakarta">DI Yogyakarta</option>
+                  <option value="Jawa Timur">Jawa Timur</option>
+                  <option value="Bali">Bali</option>
+                  <option value="Sumatera Utara">Sumatera Utara</option>
+                  <option value="Sumatera Barat">Sumatera Barat</option>
+                  <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="customer-city">Kota / Kabupaten <span aria-hidden="true">*</span></label>
+                <select class="form-control" id="customer-city" name="city" autocomplete="address-level2" required>
+                  <option value="" selected disabled>Pilih kota / kabupaten</option>
+                  <option value="Bandung">Bandung</option>
+                  <option value="Bandung Barat">Bandung Barat</option>
+                  <option value="Bandung (Kota)">Bandung (Kota)</option>
+                  <option value="Cimahi">Cimahi</option>
+                  <option value="Jakarta Selatan">Jakarta Selatan</option>
+                  <option value="Jakarta Pusat">Jakarta Pusat</option>
+                  <option value="Tangerang">Tangerang</option>
+                  <option value="Semarang">Semarang</option>
+                  <option value="Yogyakarta">Yogyakarta</option>
+                  <option value="Surabaya">Surabaya</option>
+                  <option value="Kota lainnya">Kota lainnya</option>
+                </select>
+                <small class="form-field__hint">Daftar ini contoh; nanti bisa dihubungkan ke API wilayah.</small>
+              </div>
+
+              <div class="form-field">
+                <label for="customer-postal">Kode pos <span aria-hidden="true">*</span></label>
+                <input
+                  class="form-control"
+                  id="customer-postal"
+                  name="postalCode"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  pattern="[0-9]{5}"
+                  maxlength="5"
+                  placeholder="40123"
+                  title="Masukkan 5 digit kode pos."
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="delivery-note">Catatan untuk kurir <span class="optional-label">opsional</span></label>
+                <input
+                  class="form-control"
+                  id="delivery-note"
+                  name="deliveryNote"
+                  type="text"
+                  placeholder="Contoh: pagar hitam, rumah pojok"
+                  maxlength="120"
+                  autocomplete="off"
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- SHIPPING -->
+          <section class="checkout-card" id="shipping-section" aria-labelledby="shipping-title">
+            <div class="checkout-card__heading">
+              <div>
+                <p class="checkout-card__eyebrow">STEP 03 / DELIVERY</p>
+                <h3 class="checkout-card__title" id="shipping-title">Pilih pengiriman</h3>
+              </div>
+              <span class="checkout-card__index" aria-hidden="true">03</span>
+            </div>
+
+            <fieldset class="choice-list">
+              <legend class="visually-hidden">Metode pengiriman</legend>
+              <label class="choice-card">
+                <input type="radio" name="shippingMethod" value="regular" data-shipping-fee="15000" checked>
+                <span class="choice-card__indicator" aria-hidden="true"></span>
+                <span class="choice-card__copy">
+                  <strong>Regular delivery</strong>
+                  <small>Estimasi 2–5 hari kerja</small>
+                </span>
+                <span class="choice-card__price">Rp15.000</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="shippingMethod" value="express" data-shipping-fee="25000">
+                <span class="choice-card__indicator" aria-hidden="true"></span>
+                <span class="choice-card__copy">
+                  <strong>Express delivery</strong>
+                  <small>Estimasi 1–2 hari kerja</small>
+                </span>
+                <span class="choice-card__price">Rp25.000</span>
+              </label>
+            </fieldset>
+            <p class="checkout-card__footnote">Regular delivery gratis untuk subtotal produk minimal Rp250.000. Estimasi dan tarif di halaman ini masih simulasi.</p>
+          </section>
+
+          <!-- PAYMENT -->
+          <section class="checkout-card" id="payment-section" aria-labelledby="payment-title">
+            <div class="checkout-card__heading">
+              <div>
+                <p class="checkout-card__eyebrow">STEP 04 / PAYMENT</p>
+                <h3 class="checkout-card__title" id="payment-title">Metode pembayaran</h3>
+              </div>
+              <span class="checkout-card__index" aria-hidden="true">04</span>
+            </div>
+
+            <fieldset class="choice-list choice-list--payment">
+              <legend class="visually-hidden">Pilih metode pembayaran</legend>
+              <label class="choice-card">
+                <input type="radio" name="paymentMethod" value="bank-transfer" checked>
+                <span class="choice-card__indicator" aria-hidden="true"></span>
+                <span class="choice-card__copy">
+                  <strong>Bank transfer</strong>
+                  <small>Transfer manual / virtual account (simulasi)</small>
+                </span>
+                <span class="choice-card__mark" aria-hidden="true">BANK</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="paymentMethod" value="e-wallet">
+                <span class="choice-card__indicator" aria-hidden="true"></span>
+                <span class="choice-card__copy">
+                  <strong>E-wallet</strong>
+                  <small>GoPay, OVO, DANA (simulasi)</small>
+                </span>
+                <span class="choice-card__mark" aria-hidden="true">WALLET</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="paymentMethod" value="cod">
+                <span class="choice-card__indicator" aria-hidden="true"></span>
+                <span class="choice-card__copy">
+                  <strong>Cash on delivery</strong>
+                  <small>Bayar saat pesanan diterima (simulasi)</small>
+                </span>
+                <span class="choice-card__mark" aria-hidden="true">COD</span>
+              </label>
+            </fieldset>
+          </section>
+
+          <!-- ORDER SUMMARY -->
+          <section class="checkout-card order-card" id="order-summary" aria-labelledby="order-title">
+            <div class="checkout-card__heading">
+              <div>
+                <p class="checkout-card__eyebrow">DOUBLE CHECK</p>
+                <h3 class="checkout-card__title" id="order-title">Ringkasan pesanan</h3>
+              </div>
+              <a class="order-card__edit" href="kategori.html">Tambah item ↗</a>
+            </div>
+
+            <ul class="order-items" id="order-items">
+              <li class="order-item" data-unit-price="420000">
+                <img
+                  class="order-item__image"
+                  src="assets/2.png"
+                  alt="Senyap Graphic Tee warna washed black"
+                  width="88"
+                  height="110"
+                  loading="lazy"
+                >
+                <div class="order-item__details">
+                  <strong>Senyap Graphic Tee</strong>
+                  <span>Washed Black · Size M</span>
+                  <small>Rp420.000 / item</small>
+                </div>
+                <label class="order-item__quantity">
+                  <span class="visually-hidden">Jumlah Senyap Graphic Tee</span>
+                  <input class="quantity-input" type="number" min="1" max="10" value="1" inputmode="numeric" aria-label="Jumlah Senyap Graphic Tee">
+                </label>
+                <strong class="order-item__line-total">Rp420.000</strong>
+              </li>
+
+              <li class="order-item" data-unit-price="300000">
+                <img
+                  class="order-item__image"
+                  src="assets/3.png"
+                  alt="Angel Vintage Tee warna vintage black"
+                  width="88"
+                  height="110"
+                  loading="lazy"
+                >
+                <div class="order-item__details">
+                  <strong>Angel Vintage Tee</strong>
+                  <span>Vintage Black · Size L</span>
+                  <small>Rp300.000 / item</small>
+                </div>
+                <label class="order-item__quantity">
+                  <span class="visually-hidden">Jumlah Angel Vintage Tee</span>
+                  <input class="quantity-input" type="number" min="1" max="10" value="1" inputmode="numeric" aria-label="Jumlah Angel Vintage Tee">
+                </label>
+                <strong class="order-item__line-total">Rp300.000</strong>
+              </li>
+            </ul>
+
+            <div class="order-totals" aria-live="polite" aria-atomic="true">
+              <div class="order-totals__row">
+                <span>Subtotal produk</span>
+                <strong id="subtotal-value">Rp720.000</strong>
+              </div>
+              <div class="order-totals__row">
+                <span>Pengiriman</span>
+                <strong id="shipping-value">Gratis</strong>
+              </div>
+              <div class="order-totals__row order-totals__row--grand">
+                <span>Total pembayaran</span>
+                <strong id="grand-total-value">Rp720.000</strong>
+              </div>
+            </div>
+
+            <label class="consent-check">
+              <input type="checkbox" name="terms" required>
+              <span>Saya sudah memeriksa detail pesanan dan menyetujui informasi yang diberikan.</span>
+            </label>
+
+            <button class="checkout-submit" type="submit">
+              <span>Lanjutkan pesanan</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <p class="checkout-submit__note">Demo frontend — belum mengirim pesanan atau memproses pembayaran sungguhan.</p>
+            <p class="checkout-feedback" id="checkout-feedback" role="status" aria-live="polite"></p>
+          </section>
+        </form>
       </div>
 
       </section>
