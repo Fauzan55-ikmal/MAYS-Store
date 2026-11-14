@@ -48,6 +48,108 @@
       </div>
     </header>
 
+    <main id="main-content" tabindex="-1">
+      <!-- Checkout workspace: sidebar di kiri, formulir utama di kanan. -->
+      <section class="checkout-workspace page-shell" aria-labelledby="checkout-title">
+        <aside class="checkout-sidebar" aria-label="Navigasi checkout">
+        <div class="checkout-sidebar__top">
+          <p class="checkout-sidebar__eyebrow">YOUR CHECKOUT</p>
+          <p class="checkout-sidebar__step"><span>01</span> / 04</p>
+        </div>
+
+        <nav class="checkout-steps" aria-label="Bagian formulir checkout">
+          <a class="checkout-steps__link is-active" href="#customer-section" aria-current="step">
+            <span class="checkout-steps__number">01</span>
+            <span class="checkout-steps__copy">
+              <strong>Identitas</strong>
+              <small>Siapa penerimanya?</small>
+            </span>
+            <span class="checkout-steps__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="checkout-steps__link" href="#address-section">
+            <span class="checkout-steps__number">02</span>
+            <span class="checkout-steps__copy">
+              <strong>Alamat</strong>
+              <small>Ke mana dikirim?</small>
+            </span>
+            <span class="checkout-steps__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="checkout-steps__link" href="#shipping-section">
+            <span class="checkout-steps__number">03</span>
+            <span class="checkout-steps__copy">
+              <strong>Pengiriman</strong>
+              <small>Pilih cara kirim.</small>
+            </span>
+            <span class="checkout-steps__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="checkout-steps__link" href="#payment-section">
+            <span class="checkout-steps__number">04</span>
+            <span class="checkout-steps__copy">
+              <strong>Pembayaran</strong>
+              <small>Pilih metode bayar.</small>
+            </span>
+            <span class="checkout-steps__arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="checkout-sidebar__audio">
+          <p class="checkout-sidebar__eyebrow">SET THE MOOD</p>
+          <button
+            class="audio-toggle audio-toggle--sidebar"
+            type="button"
+            data-audio-toggle
+            aria-controls="background-audio"
+            aria-pressed="false"
+          >
+            <span class="audio-toggle__icon" aria-hidden="true">♫</span>
+            <span class="audio-toggle__label">Putar musik</span>
+            <span class="audio-toggle__state" aria-hidden="true">OFF</span>
+          </button>
+          <p class="checkout-sidebar__audio-note">Musik bisa dihentikan kapan saja.</p>
+          <audio id="background-audio" loop preload="none">
+            <source src="assets/audio/mays-ambient.mp3" type="audio/mpeg">
+            Browser kamu tidak mendukung audio HTML5.
+          </audio>
+        </div>
+
+        <figure class="checkout-sidebar__campaign">
+          <div class="checkout-sidebar__video-frame">
+            <video
+              class="checkout-sidebar__video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/1.png"
+              aria-hidden="true"
+              tabindex="-1"
+              data-campaign-video
+            >
+              <source src="assets/video/mays-sidebar-loop.mp4" type="video/mp4">
+              Browser kamu tidak mendukung video HTML5.
+            </video>
+            <span class="checkout-sidebar__video-mark" aria-hidden="true">M / 01</span>
+          </div>
+          <figcaption class="checkout-sidebar__campaign-caption">
+            MAY'S VISUAL DIARY <span aria-hidden="true">—</span> DAILY ROTATION
+          </figcaption>
+        </figure>
+
+        <div class="checkout-sidebar__note">
+          <span aria-hidden="true">✳</span>
+          <p>Take your time. Good choices deserve a little pause.</p>
+        </div>
+
+        <p class="visually-hidden" id="audio-status" role="status" aria-live="polite">
+          Musik mati. Tekan tombol putar musik untuk memulai.
+        </p>
+      </aside>
+      </section>
+    </main>
     <!-- Konten Disini -->
 
     <!-- Global Footer -->
